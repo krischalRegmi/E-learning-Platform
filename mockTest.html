@@ -1,83 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Pathshala</title>
-    <style>
-        .logo{
-    margin-left: 20px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>e-Pathshala - Mock Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-.logo img{
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      position: relative;
+      height: 100px;
+    }
 
-    height: 100px;
-    margin:0;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-}
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
 
-header h1 {
-    position: absolute;
-    top: 50px;
-}
+    header h1 {
+      font-size: 1.8em;
+      color: #333;
+    }
 
-nav {
-    color: white;
-    background-color: rgb(89, 114, 121);
-    display: flex;
-    margin: 20px;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    gap:50px;
-    padding: 0px 20px;
-    border-radius: 20px;
-}
+    .bars {
+      display: none;
+      cursor: pointer;
+    }
 
-nav a{
-    font-size: 2em;
-    color: white;
-    text-decoration: none;
+    nav {
+      display: flex;
+      gap: 30px;
+      background-color: rgb(89, 114, 121);
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
 
-}
-.main img{
-    margin:0% 20%;
-    width: 50vw;
-}
-.main h1{
-    text-align: center;
-    font-size:4em;
-}
-.main p{
-    text-align: center;
-    font-size:4em;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3em;
+    }
 
-    </style>
+    .main {
+      padding: 30px 20px;
+      text-align: center;
+      min-height: 70vh;
+    }
+
+    .main h1 {
+      font-size: 3em;
+      background-color: rgb(172, 196, 216);
+      padding: 10px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .main p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .main img {
+      width: 50vw;
+      max-width: 400px;
+      border-radius: 15px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .summary p {
+      margin: 5px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .bars {
+        display: block;
+        width: 30px;
+      }
+
+      header {
+        flex-wrap: wrap;
+        height: auto;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      .main img {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/image6.jpeg" alt="logo">
-            <h1>e-Pathshala</h1>
-        </div>
-        <nav>
-                <a href="index.html">Home</a>
-                <a href="ourCourses.html">Our Courses</a>
-                <a href="liveClass.html">Live Class</a>
-                <a href="mockTest.html">Mock Test</a>
-                <a href="aboutUs.html">About Us</a>
-        </nav>
-    </header>
-    <section class="main">
-        <h1> MOCK TEST</h1>
-        <P> WE ARE GOING TO CONDUCT ONLINE MOCK TEST ON FRIDAY DATE:10 JUNE 2022</P>
-        <img src="images/Unknown-2" alt="calander">
-    </section>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1511/1511439.png" alt="logo">
+      <h1>e-Pathshala</h1>
+    </div>
+    <img class="bars" id="bars" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu icon">
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </nav>
+  </header>
+
+  <section class="main">
+    <h1>MOCK TEST</h1>
+    <p>We are going to conduct an online mock test on <strong>Friday, 10 June 2022</strong>.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxU3Jvd2dDMxB2jjlSMQmoq2a5mz-W-_NFkw&s" alt="calendar">
+  </section>
+
+  <footer>
+    <div class="summary">
+      <p>The best e-learning platform in Nepal ensuring quality education. Register now!</p>
+      <p>&copy; 2025, e-Pathshala, All Rights Reserved</p>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </div>
+  </footer>
+
+  <script>
+    const bars = document.getElementById("bars");
+    const nav = document.getElementById("navMenu");
+    bars.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

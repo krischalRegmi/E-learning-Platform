@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Pathshala</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>e-Pathshala</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/image6.jpeg" alt="logo">
-            <h1>e-Pathshala</h1>
-        </div>
-        <img class="bars" id="bars" src="fontawesome-free-6.7.2-web/svgs/solid/bars.svg">
-        <nav>
-                <a href="index.html">Home</a>
-                <a href="ourCourses.html">Our Courses</a>
-                <a href="liveClass.html">Live Class</a>
-                <a href="mockTest.html">Mock Test</a>
-                <a href="aboutUs.html">About Us</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1511/1511439.png" alt="logo" width="50">
+      <h1>e-Pathshala</h1>
+    </div>
+    <img class="bars" id="bars" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu icon" width="30">
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </nav>
+  </header>
 
-    <section class="main">
-        <div class="message">
-            <h1>Yours E-learning Platform</h1>
-            <p>Here we provide a quality online education from our professional teachers. Also we conduct motivational classes to inspire our students in IT-Sector.</p>
-        </div>
-    </section>
+  <section class="main">
+    <div class="message">
+      <h1>Your E-learning Platform</h1>
+      <p>We provide quality online education from our professional teachers. We also conduct motivational classes to inspire students in the IT sector.</p>
+    </div>
+  </section>
 
-    <section class="features">
-            <h1>Our Features</h1>
-            <div class="flexbox">
-                <div class="feature">
-                    <h2>Learn Anywhere</h2>
-                    <img src="images/image1.avif" alt="img1">
-                    <p>Students learning through this website can have direct communication with our profesors for clearing Doubts</p>
-                </div>
-                <div class="feature">
-                  <h2>Inspiring Students</h2>
-                  <img src="images/image4.avif" alt="img4">
-                   <p>We also conduct various motivational programs and motivate students by ours professors</p>
-                 </div>
-                 <div class="feature">
-                     <h2>Specialized Courses</h2>
-                     <img src="images/image2.avif" alt="img2">
-                    <p>Here we provide a courses like: Engineering Entrance Preparation, CEE entrance Prepration, and other Technical Courses</p>
-            </div>
-            </div>
+  <section class="features">
+    <h1>Our Features</h1>
+    <div class="flexbox">
+      <div class="feature">
+        <h2>Learn Anywhere</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBW1QPjIiHmqrZXzsHsyQKpw1pzeKjh3gkUIP1ftugg&s" alt="learn anywhere" width="200">
+        <p>Students can directly communicate with our instructors to clear their doubts.</p>
+      </div>
+      <div class="feature">
+        <h2>Inspiring Students</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9plc9VUlF0ATJU1rCo2XNaS-QUo0igHLAS1Lr9yegw&s" alt="inspire" width="200">
+        <p>We conduct motivational programs and events led by our educators.</p>
+      </div>
+      <div class="feature">
+        <h2>Specialized Courses</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG7yplLZLsegjcINTJNALu6vv_ZokuySj6HUT1M3ndaw&s" alt="courses" width="200">
+        <p>Courses like Engineering Entrance Prep, CEE, and other technical tracks are available.</p>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <footer>
+    <div class="summary">
+      <p>The best e-learning platform in Nepal ensuring quality education. Register now!</p>
+      <p>&copy; 2025, e-Pathshala, All Rights Reserved</p>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="summary">
-            <p>The one and only best e-learning platform in Nepal that ensures Quality education for our students.Hurry Up and Register As Soon As Possible</p>
-            <p>@2025, e-Pathshala, All Rights Reserved</p>
-        </div>
-        <div class="links">
-            <a href="index.html">Home</a>
-            <a href="ourCourses.html">Our Courses</a>
-            <a href="liveClass.html">Live Class</a>
-            <a href="mockTest.html">Mock Test</a>
-            <a href="aboutUs.html">About Us</a>
-        </div>
-    </footer>
+  <script>
+    const bars = document.getElementById("bars");
+    const nav = document.getElementById("navMenu");
 
-
+    bars.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

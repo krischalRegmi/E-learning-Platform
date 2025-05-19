@@ -1,84 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Pathshala</title>
-    <style>
-        .logo{
-    margin-left: 20px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>e-Pathshala - About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-.logo img{
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      position: relative;
+      height: 100px;
+    }
 
-    height: 100px;
-    margin:0;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-}
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
 
-header h1 {
-    position: absolute;
-    top: 50px;
-}
+    header h1 {
+      font-size: 1.8em;
+      color: #333;
+    }
 
-nav {
-    color: white;
-    background-color: rgb(89, 114, 121);
-    display: flex;
-    margin: 20px;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    gap:50px;
-    padding: 0px 20px;
-    border-radius: 20px;
-}
+    .bars {
+      display: none;
+      cursor: pointer;
+    }
 
-nav a{
-    font-size: 2em;
-    color: white;
-    text-decoration: none;
+    nav {
+      display: flex;
+      gap: 30px;
+      background-color: rgb(89, 114, 121);
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
 
-}
-.main{
-    display: flex;
-    padding:5%;
-    justify-content: center;
-    align-items: center;
-}
-.main p{
-    font-size:2em;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3em;
+    }
 
-}
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+      gap: 40px;
+      min-height: 70vh;
+    }
 
-    </style>
+    .main img {
+      width: 300px;
+      border-radius: 15px;
+    }
+
+    .main p {
+      font-size: 1.5em;
+      max-width: 600px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .summary p {
+      margin: 5px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .bars {
+        display: block;
+        width: 30px;
+      }
+
+      header {
+        flex-wrap: wrap;
+        height: auto;
+      }
+
+      .main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main img {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/image6.jpeg" alt="logo">
-            <h1>e-Pathshala</h1>
-        </div>
-        <nav>
-                <a href="index.html">Home</a>
-                <a href="ourCourses.html">Our Courses</a>
-                <a href="liveClass.html">Live Class</a>
-                <a href="mockTest.html">Mock Test</a>
-                <a href="aboutUs.html">About Us</a>
-        </nav>
-    </header>
-    <section class="main">
-        <img src="images/image6.jpeg">
-        <p>e-Pathsala is a online learning platforn that enables every students world wide to take online classes and boost up their knowledge.<br><br>
-            CONTACT US: 9864638264<br>
-            EMAIL: anilrijal2022@gmail.com<br>
-            WEBSITE: e-pathshala.com<br>
-        </p>
-    </section>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1511/1511439.png" alt="logo">
+      <h1>e-Pathshala</h1>
+    </div>
+    <img class="bars" id="bars" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu icon">
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </nav>
+  </header>
+
+  <section class="main">
+    <img src="https://cdn-icons-png.flaticon.com/512/1511/1511439.png" alt="Team">
+    <p>
+      e-Pathshala is an online learning platform that empowers students worldwide to attend interactive classes and enhance their knowledge.<br><br>
+      <strong>Contact Us:</strong> 9864638264<br>
+      <strong>Email:</strong> anilrijal2022@gmail.com<br>
+      <strong>Website:</strong> e-pathshala.com
+    </p>
+  </section>
+
+  <footer>
+    <div class="summary">
+      <p>The best e-learning platform in Nepal ensuring quality education. Register now!</p>
+      <p>&copy; 2025, e-Pathshala, All Rights Reserved</p>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </div>
+  </footer>
+
+  <script>
+    const bars = document.getElementById("bars");
+    const nav = document.getElementById("navMenu");
+    bars.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

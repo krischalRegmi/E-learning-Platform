@@ -1,100 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Pathshala</title>
-    <style>
-        .logo{
-    margin-left: 20px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>e-Pathshala - Our Courses</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-.logo img{
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      position: relative;
+      height: 100px;
+    }
 
-    height: 100px;
-    margin:0;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-}
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
 
-header h1 {
-    position: absolute;
-    top: 50px;
-}
+    header h1 {
+      font-size: 1.8em;
+      color: #333;
+    }
 
-nav {
-    color: white;
-    background-color: rgb(89, 114, 121);
-    display: flex;
-    margin: 20px;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    gap:50px;
-    padding: 0px 20px;
-    border-radius: 20px;
-}
+    .bars {
+      display: none;
+      cursor: pointer;
+    }
 
-nav a{
-    font-size: 2em;
-    color: white;
-    text-decoration: none;
+    nav {
+      display: flex;
+      gap: 30px;
+      background-color: rgb(89, 114, 121);
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
 
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3em;
+    }
 
-.container{
-    display:flex;
-    flex-wrap: wrap;
-    gap:20px;
-}
+    .main {
+      padding-top: 40px;
+      text-align: center;
+    }
 
-.container img{
-    border-radius: 20px;
-    margin:auto;
-}
+    .main h1 {
+      font-size: 3em;
+      background-color: rgb(172, 196, 216);
+      border-radius: 15px;
+      padding: 10px;
+      margin: 20px auto;
+      max-width: 90%;
+    }
 
-.main h1{
-    font-size: 4em;
-    text-align: center;
-    background-color: rgb(172, 196, 216);
-    border-radius: 15px;
-}
+    .main h3 {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
 
-.main h3{
-    text-align: center;
-    font-size: 2em;
-} 
-    </style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 0 20px 40px;
+    }
+
+    .container img {
+      border-radius: 20px;
+      width: 300px;
+      height: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .container img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .summary p {
+      margin: 5px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .bars {
+        display: block;
+        width: 30px;
+      }
+
+      header {
+        flex-wrap: wrap;
+        height: auto;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/image6.jpeg" alt="logo">
-            <h1>e-Pathshala</h1>
-        </div>
-        <nav>
-                <a href="index.html">Home</a>
-                <a href="ourCourses.html">Our Courses</a>
-                <a href="liveClass.html">Live Class</a>
-                <a href="mockTest.html">Mock Test</a>
-                <a href="aboutUs.html">About Us</a>
-        </nav>
-    </header>
-
-<section class="main">
-    <h1>Our Courses</h1>
-    <H3>CURRENTLY WE ARE PROVIDING ALL THESE COURSES.</H3>
-    <div class="container">
-        <img src="images/course_thumbnail_default_48.jpg">
-        <img src="images/course_thumbnail_default_53.jpg">
-        <img src="images/course_thumbnail_default_76.jpg">
-        <img src="images/course_thumbnail_default_113.jpg">
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1511/1511439.png" alt="logo">
+      <h1>e-Pathshala</h1>
     </div>
-</section>
+    <img class="bars" id="bars" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu icon">
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </nav>
+  </header>
 
+  <section class="main">
+    <h1>Our Courses</h1>
+    <h3>CURRENTLY WE ARE PROVIDING ALL THESE COURSES</h3>
+    <div class="container">
+      <img src="https://mero.school/uploads/thumbnails/course_thumbnails/course_thumbnail_default_113.jpg?time=1728454649" alt="Course 1">
+      <img src="https://mero.school/uploads/thumbnails/course_thumbnails/course_thumbnail_default_53.jpg?time=1741255113" alt="Course 2">
+      <img src="https://mero.school/uploads/thumbnails/course_thumbnails/course_thumbnail_default_76.jpg?time=1729059296" alt="Course 3">
+      <img src="https://mero.school/uploads/thumbnails/course_thumbnails/course_thumbnail_default_48.jpg?time=1741251393" alt="Course 4">
+    </div>
+  </section>
+
+  <footer>
+    <div class="summary">
+      <p>The best e-learning platform in Nepal ensuring quality education. Register now!</p>
+      <p>&copy; 2025, e-Pathshala, All Rights Reserved</p>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </div>
+  </footer>
+
+  <script>
+    const bars = document.getElementById("bars");
+    const nav = document.getElementById("navMenu");
+    bars.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

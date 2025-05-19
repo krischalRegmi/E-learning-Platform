@@ -1,114 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Pathshala</title>
-    <style>
-        .logo{
-    margin-left: 20px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>e-Pathshala - Live Classes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-.logo img{
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      position: relative;
+      height: 100px;
+    }
 
-    height: 100px;
-    margin:0;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    margin-bottom: 5vh;
-}
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
 
-header h1 {
-    position: absolute;
-    top: 50px;
-}
+    header h1 {
+      font-size: 1.8em;
+      color: #333;
+    }
 
-nav {
-    color: white;
-    background-color: rgb(89, 114, 121);
-    display: flex;
-    margin: 20px;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    gap:50px;
-    padding: 0px 20px;
-    border-radius: 20px;
-}
+    .bars {
+      display: none;
+      cursor: pointer;
+    }
 
-nav a{
-    font-size: 2em;
-    color: white;
-    text-decoration: none;
+    nav {
+      display: flex;
+      gap: 30px;
+      background-color: rgb(89, 114, 121);
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
 
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3em;
+    }
 
-h1{
-    text-align: center;
-    font-size: 4em;
-}
+    .main {
+      padding: 30px 20px;
+      background-color: antiquewhite;
+      min-height: 70vh;
+    }
 
-table{
-    height: 50vh;
-    font-size: 2em;
-    width: 80%;
-    margin:auto
-    
-}
+    .main h1 {
+      font-size: 3em;
+      text-align: center;
+      background-color: rgb(172, 196, 216);
+      border-radius: 15px;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
 
-.main{
-    background-color: antiquewhite;
-    height: 80dvh;
-}
-    </style>
+    table {
+      width: 90%;
+      margin: auto;
+      border-collapse: collapse;
+      font-size: 1.5em;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    table, th, td {
+      border: 2px solid #555;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .summary p {
+      margin: 5px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .bars {
+        display: block;
+        width: 30px;
+      }
+
+      header {
+        flex-wrap: wrap;
+        height: auto;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      table {
+        font-size: 1.1em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/image6.jpeg" alt="logo">
-            <h1>e-Pathshala</h1>
-        </div>
-        <nav>
-                <a href="index.html">Home</a>
-                <a href="ourCourses.html">Our Courses</a>
-                <a href="liveClass.html">Live Class</a>
-                <a href="mockTest.html">Mock Test</a>
-                <a href="aboutUs.html">About Us</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1511/1511439.png" alt="logo">
+      <h1>e-Pathshala</h1>
+    </div>
+    <img class="bars" id="bars" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu icon">
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </nav>
+  </header>
 
-    <section class="main">
+  <section class="main">
+    <h1>LIVE CLASSES WHICH ARE CURRENTLY GOING ON</h1>
+    <table>
+      <tr>
+        <th>Subjects</th>
+        <th>Teacher</th>
+        <th>Time</th>
+      </tr>
+      <tr>
+        <td>Maths</td>
+        <td>Resham Basyal</td>
+        <td>5:00 AM</td>
+      </tr>
+      <tr>
+        <td>Physics</td>
+        <td>Alakh Pandey</td>
+        <td>10:00 AM</td>
+      </tr>
+      <tr>
+        <td>Chemistry</td>
+        <td>Deepak Basyal</td>
+        <td>1:00 PM</td>
+      </tr>
+    </table>
+  </section>
 
-<h1> LIVE CLASSES WHICH ARE CURRENTLY GOING ON</h1>
-<table border="2">
-    <tr>
-    <th> SUBJECTS</th>
-    <th> TEACHER</th>
-    <th> Time</th>
+  <footer>
+    <div class="summary">
+      <p>The best e-learning platform in Nepal ensuring quality education. Register now!</p>
+      <p>&copy; 2025, e-Pathshala, All Rights Reserved</p>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="ourCourses.html">Our Courses</a>
+      <a href="liveClass.html">Live Class</a>
+      <a href="mockTest.html">Mock Test</a>
+      <a href="aboutUs.html">About Us</a>
+    </div>
+  </footer>
 
-    </tr>
-    <tr>
-        <th> MATHS</th>
-        <th> RESHAM BASYAL</th>
-        <th> 5AM</th>
-    
-        </tr>
-        <tr>
-            <th> PHYSICS</th>
-            <th> ALAKH PANDEY</th>
-            <th> 10 AM</th>
-        
-        </tr>
-        <tr>
-            <th> CHEMISTRY</th>
-            <th> DEIPAK BASYAL</th>
-            <th> 1 PM</th>
-        
-        </tr>        
-        </section> 
+  <script>
+    const bars = document.getElementById("bars");
+    const nav = document.getElementById("navMenu");
+    bars.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
